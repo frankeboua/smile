@@ -1,0 +1,3 @@
+storage/*.sqlite
+storage/install.lock
+storage/*.log

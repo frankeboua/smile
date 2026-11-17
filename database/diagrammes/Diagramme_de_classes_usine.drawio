@@ -1,0 +1,787 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="global" name="Diagramme de classes global">
+    <mxGraphModel dx="2200" dy="1800" grid="1" gridSize="10" page="1" pageWidth="2280" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Diagramme de classes — Gestion de l’usine" style="text;html=1;fontSize=26;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="20" width="1200" height="45" />
+        </mxCell>
+        <mxCell id="e0" value="Dirige" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" edge="1" parent="1" source="CollaborateurResponsable" target="Atelier">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e0s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e0">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e0t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e0">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" value="Comporte" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Atelier" target="LigneProduction">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e1">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1t" value="2..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e1">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="Regroupe" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Equipe" target="Operateur">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e2">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e2">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="Concerne" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="LotProduction" target="IncidentProduction">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e3">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e3">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="Est de type" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="IncidentProduction" target="TypeIncident">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4s" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e4">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4t" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e4">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="Detaille" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Intervention" target="Maintenance">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5s" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e5">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5t" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e5">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="Porte sur" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Maintenance" target="Machine">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6s" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e6">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6t" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e6">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="Achete a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="AchatPiece" target="Fournisseur">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7s" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e7">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7t" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e7">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="Consomme" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ConsommationPiece" target="Piece">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e8s" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e8">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8t" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e8">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="Oeuvre sur" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Operateur" target="LotProduction">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9s" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e9">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e9">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="Effectue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=0;exitY=1;entryX=0.75;entryY=0;" edge="1" parent="1" source="Operateur" target="Intervention">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="500" y="825" />
+              <mxPoint x="300" y="825" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e10">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e10">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="Consommations" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="Intervention" target="ConsommationPiece">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e11s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e11">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e11">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="Encadre" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=0;exitY=1;entryX=0.6;entryY=0;" edge="1" parent="1" source="CollaborateurResponsable" target="Equipe">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="470" y="345" />
+              <mxPoint x="470" y="400" />
+              <mxPoint x="252" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e12">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e12">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="Produit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.3;exitY=1;entryX=0.75;entryY=0;" edge="1" parent="1" source="LigneProduction" target="LotProduction">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1476" y="440" />
+              <mxPoint x="1180" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e13">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e13">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="Est fabrique dans" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.75;exitY=1;entryX=0.9;entryY=0;" edge="1" parent="1" source="Produit" target="LotProduction">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2060" y="385" />
+              <mxPoint x="1228" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e14">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e14">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="Est constituee de" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.7;entryX=0.8;entryY=0;" edge="1" parent="1" source="LigneProduction" target="Machine">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1760" y="271.5" />
+              <mxPoint x="1760" y="850" />
+              <mxPoint x="1196" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e15">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15t" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e15">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" value="Possede un historique" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.95;exitY=1;entryX=0.5;entryY=1;" edge="1" parent="1" source="Piece" target="AchatPiece">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="804" y="1590" />
+              <mxPoint x="1540" y="1590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e16">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e16">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" value="Est proposee par" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.8;exitY=1;entryX=0.8;entryY=1;" edge="1" parent="1" source="Piece" target="Fournisseur">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="756" y="1640" />
+              <mxPoint x="2136" y="1640" />
+              <mxPoint x="2076.0" y="1640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17s" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e17">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17t" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e17">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" value="Piece composee" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.2;entryX=0;entryY=0.2;" edge="1" parent="1" source="Piece" target="CompositionPiece">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e18s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e18">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e18">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" value="Composant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.8;entryX=0;entryY=0.8;" edge="1" parent="1" source="Piece" target="CompositionPiece">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e19s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e19">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e19">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" value="Profil operateur" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.7;exitY=1;entryX=0.3;entryY=0;" edge="1" parent="1" source="CompteUtilisateur" target="Operateur">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="284" y="420" />
+              <mxPoint x="632" y="420" />
+              <mxPoint x="596.0" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20s" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e20">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20t" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e20">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" value="Profil responsable" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#444444;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.3;entryX=0;entryY=0.3;" edge="1" parent="1" source="CompteUtilisateur" target="CollaborateurResponsable">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e21s" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e21">
+          <mxGeometry as="geometry" x="-0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21t" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=13;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="e21">
+          <mxGeometry as="geometry" x="0.85" y="-14" relative="1">
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CompteUtilisateur" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="100" width="320" height="245" />
+        </mxCell>
+        <mxCell id="CompteUtilisateurname" value="CompteUtilisateur" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="CompteUtilisateur">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="CompteUtilisateurattrs" value="- idCompte : Integer&lt;br&gt;- identifiant : String {unique}&lt;br&gt;- motDePasseHache : String&lt;br&gt;- role : RoleUtilisateur&lt;br&gt;- actif : Boolean" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="CompteUtilisateur">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="110" />
+        </mxCell>
+        <mxCell id="CompteUtilisateurops" value="+ authentifier() : Boolean&lt;br&gt;+ seDeconnecter() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="CompteUtilisateur">
+          <mxGeometry as="geometry" x="0" y="148" width="320" height="97" />
+        </mxCell>
+        <mxCell id="CompteUtilisateurline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="CompteUtilisateur">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CompteUtilisateurline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="CompteUtilisateur">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="148" />
+            <mxPoint as="targetPoint" x="320" y="148" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CollaborateurResponsable" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="500" y="100" width="320" height="245" />
+        </mxCell>
+        <mxCell id="CollaborateurResponsablename" value="CollaborateurResponsable" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="CollaborateurResponsable">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="CollaborateurResponsableattrs" value="- idCollaborateur : Integer&lt;br&gt;- nom : String&lt;br&gt;- prenom : String" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="CollaborateurResponsable">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="70" />
+        </mxCell>
+        <mxCell id="CollaborateurResponsableops" value="+ consulterEquipes() : void&lt;br&gt;+ consulterAteliers() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="CollaborateurResponsable">
+          <mxGeometry as="geometry" x="0" y="108" width="320" height="137" />
+        </mxCell>
+        <mxCell id="CollaborateurResponsableline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="CollaborateurResponsable">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CollaborateurResponsableline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="CollaborateurResponsable">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="108" />
+            <mxPoint as="targetPoint" x="320" y="108" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Atelier" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="100" width="320" height="245" />
+        </mxCell>
+        <mxCell id="Ateliername" value="Atelier" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="Atelier">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="Atelierattrs" value="- numeroAtelier : Integer&lt;br&gt;- libelle : String" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Atelier">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="50" />
+        </mxCell>
+        <mxCell id="Atelierops" value="+ creer() : void&lt;br&gt;+ modifier() : void&lt;br&gt;+ supprimer() : void&lt;br&gt;+ consulter() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Atelier">
+          <mxGeometry as="geometry" x="0" y="88" width="320" height="157" />
+        </mxCell>
+        <mxCell id="Atelierline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Atelier">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Atelierline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Atelier">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="88" />
+            <mxPoint as="targetPoint" x="320" y="88" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LigneProduction" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1380" y="100" width="320" height="245" />
+        </mxCell>
+        <mxCell id="LigneProductionname" value="LigneProduction" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="LigneProduction">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="LigneProductionattrs" value="- numeroLigne : Integer&lt;br&gt;- nbOperateursNecessaires : Integer" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="LigneProduction">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="50" />
+        </mxCell>
+        <mxCell id="LigneProductionops" value="+ ajouter() : void&lt;br&gt;+ modifier() : void&lt;br&gt;+ supprimer() : void&lt;br&gt;+ consulter() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="LigneProduction">
+          <mxGeometry as="geometry" x="0" y="88" width="320" height="157" />
+        </mxCell>
+        <mxCell id="LigneProductionline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="LigneProduction">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LigneProductionline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="LigneProduction">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="88" />
+            <mxPoint as="targetPoint" x="320" y="88" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Produit" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1820" y="100" width="320" height="245" />
+        </mxCell>
+        <mxCell id="Produitname" value="Produit" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="Produit">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="Produitattrs" value="- referenceProduit : String&lt;br&gt;- designation : String&lt;br&gt;- prixVenteUnitaire : Decimal&lt;br&gt;- quantiteStock : Integer" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Produit">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="90" />
+        </mxCell>
+        <mxCell id="Produitops" value="+ enregistrer() : void&lt;br&gt;+ modifier() : void&lt;br&gt;+ supprimer() : void&lt;br&gt;+ consulter() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Produit">
+          <mxGeometry as="geometry" x="0" y="128" width="320" height="117" />
+        </mxCell>
+        <mxCell id="Produitline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Produit">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Produitline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Produit">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="128" />
+            <mxPoint as="targetPoint" x="320" y="128" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Equipe" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="505" width="320" height="245" />
+        </mxCell>
+        <mxCell id="Equipename" value="Equipe" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="Equipe">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="Equipeattrs" value="- numeroEquipe : Integer&lt;br&gt;- libelle : String" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Equipe">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="50" />
+        </mxCell>
+        <mxCell id="Equipeops" value="+ ajouter() : void&lt;br&gt;+ modifier() : void&lt;br&gt;+ supprimer() : void&lt;br&gt;+ consulter() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Equipe">
+          <mxGeometry as="geometry" x="0" y="88" width="320" height="157" />
+        </mxCell>
+        <mxCell id="Equipeline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Equipe">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Equipeline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Equipe">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="88" />
+            <mxPoint as="targetPoint" x="320" y="88" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Operateur" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="500" y="505" width="320" height="245" />
+        </mxCell>
+        <mxCell id="Operateurname" value="Operateur" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="Operateur">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="Operateurattrs" value="- matricule : String&lt;br&gt;- nom : String&lt;br&gt;- prenom : String&lt;br&gt;- dateEntree : Date" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Operateur">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="90" />
+        </mxCell>
+        <mxCell id="Operateurops" value="+ ajouter() : void&lt;br&gt;+ modifier() : void&lt;br&gt;+ affecterEquipe(e : Equipe) : void&lt;br&gt;+ consulter() : void&lt;br&gt;+ supprimer() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Operateur">
+          <mxGeometry as="geometry" x="0" y="128" width="320" height="117" />
+        </mxCell>
+        <mxCell id="Operateurline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Operateur">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Operateurline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Operateur">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="128" />
+            <mxPoint as="targetPoint" x="320" y="128" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LotProduction" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="505" width="320" height="245" />
+        </mxCell>
+        <mxCell id="LotProductionname" value="LotProduction" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="LotProduction">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="LotProductionattrs" value="- idLot : Integer&lt;br&gt;- dateProduction : Date" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="LotProduction">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="50" />
+        </mxCell>
+        <mxCell id="LotProductionops" value="+ enregistrer() : void&lt;br&gt;+ associerOperateur(o : Operateur) : void&lt;br&gt;+ consulter() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="LotProduction">
+          <mxGeometry as="geometry" x="0" y="88" width="320" height="157" />
+        </mxCell>
+        <mxCell id="LotProductionline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="LotProduction">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LotProductionline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="LotProduction">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="88" />
+            <mxPoint as="targetPoint" x="320" y="88" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IncidentProduction" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1380" y="505" width="320" height="245" />
+        </mxCell>
+        <mxCell id="IncidentProductionname" value="IncidentProduction" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="IncidentProduction">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="IncidentProductionattrs" value="- numeroIncident : Integer&lt;br&gt;- tempsArretMinutes : Integer" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="IncidentProduction">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="50" />
+        </mxCell>
+        <mxCell id="IncidentProductionops" value="+ declarer() : void&lt;br&gt;+ associerLot(l : LotProduction) : void&lt;br&gt;+ consulterHistorique() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="IncidentProduction">
+          <mxGeometry as="geometry" x="0" y="88" width="320" height="157" />
+        </mxCell>
+        <mxCell id="IncidentProductionline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="IncidentProduction">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IncidentProductionline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="IncidentProduction">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="88" />
+            <mxPoint as="targetPoint" x="320" y="88" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TypeIncident" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1820" y="505" width="320" height="245" />
+        </mxCell>
+        <mxCell id="TypeIncidentname" value="TypeIncident" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="TypeIncident">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="TypeIncidentattrs" value="- codeType : String&lt;br&gt;- libelle : String" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="TypeIncident">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="50" />
+        </mxCell>
+        <mxCell id="TypeIncidentops" value="+ ajouter() : void&lt;br&gt;+ modifier() : void&lt;br&gt;+ supprimer() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="TypeIncident">
+          <mxGeometry as="geometry" x="0" y="88" width="320" height="157" />
+        </mxCell>
+        <mxCell id="TypeIncidentline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="TypeIncident">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TypeIncidentline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="TypeIncident">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="88" />
+            <mxPoint as="targetPoint" x="320" y="88" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Intervention" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="910" width="320" height="245" />
+        </mxCell>
+        <mxCell id="Interventionname" value="Intervention" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="Intervention">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="Interventionattrs" value="- idIntervention : Integer" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Intervention">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="30" />
+        </mxCell>
+        <mxCell id="Interventionops" value="+ noterConsommation(p : Piece, q : Integer) : void&lt;br&gt;+ consulter() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Intervention">
+          <mxGeometry as="geometry" x="0" y="68" width="320" height="177" />
+        </mxCell>
+        <mxCell id="Interventionline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Intervention">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Interventionline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Intervention">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="68" />
+            <mxPoint as="targetPoint" x="320" y="68" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Maintenance" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="500" y="910" width="320" height="245" />
+        </mxCell>
+        <mxCell id="Maintenancename" value="Maintenance" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="Maintenance">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="Maintenanceattrs" value="- idMaintenance : Integer&lt;br&gt;- debut : DateTime&lt;br&gt;- dureeMinutes : Integer" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Maintenance">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="70" />
+        </mxCell>
+        <mxCell id="Maintenanceops" value="+ declarer() : void&lt;br&gt;+ noterDuree(d : Integer) : void&lt;br&gt;+ associerOperateur(o : Operateur) : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Maintenance">
+          <mxGeometry as="geometry" x="0" y="108" width="320" height="137" />
+        </mxCell>
+        <mxCell id="Maintenanceline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Maintenance">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Maintenanceline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Maintenance">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="108" />
+            <mxPoint as="targetPoint" x="320" y="108" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Machine" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="910" width="320" height="245" />
+        </mxCell>
+        <mxCell id="Machinename" value="Machine" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="Machine">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="Machineattrs" value="- idMachine : Integer" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Machine">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="30" />
+        </mxCell>
+        <mxCell id="Machineops" value="+ consulter() : void&lt;br&gt;+ consulterMaintenances() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Machine">
+          <mxGeometry as="geometry" x="0" y="68" width="320" height="177" />
+        </mxCell>
+        <mxCell id="Machineline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Machine">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Machineline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Machine">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="68" />
+            <mxPoint as="targetPoint" x="320" y="68" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AchatPiece" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1380" y="910" width="320" height="245" />
+        </mxCell>
+        <mxCell id="AchatPiecename" value="AchatPiece" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="AchatPiece">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="AchatPieceattrs" value="- idAchat : Integer&lt;br&gt;- dateAchat : Date&lt;br&gt;- prixAchatUnitaire : Decimal" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="AchatPiece">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="70" />
+        </mxCell>
+        <mxCell id="AchatPieceops" value="+ enregistrer() : void&lt;br&gt;+ consulterHistorique() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="AchatPiece">
+          <mxGeometry as="geometry" x="0" y="108" width="320" height="137" />
+        </mxCell>
+        <mxCell id="AchatPieceline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="AchatPiece">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AchatPieceline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="AchatPiece">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="108" />
+            <mxPoint as="targetPoint" x="320" y="108" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fournisseur" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1820" y="910" width="320" height="245" />
+        </mxCell>
+        <mxCell id="Fournisseurname" value="Fournisseur" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="Fournisseur">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="Fournisseurattrs" value="- codeFournisseur : String&lt;br&gt;- raisonSociale : String&lt;br&gt;- adresse : String&lt;br&gt;- telephone : String" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Fournisseur">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="90" />
+        </mxCell>
+        <mxCell id="Fournisseurops" value="+ ajouter() : void&lt;br&gt;+ modifier() : void&lt;br&gt;+ supprimer() : void&lt;br&gt;+ consulter() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Fournisseur">
+          <mxGeometry as="geometry" x="0" y="128" width="320" height="117" />
+        </mxCell>
+        <mxCell id="Fournisseurline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Fournisseur">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fournisseurline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Fournisseur">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="128" />
+            <mxPoint as="targetPoint" x="320" y="128" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ConsommationPiece" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1315" width="320" height="245" />
+        </mxCell>
+        <mxCell id="ConsommationPiecename" value="ConsommationPiece" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="ConsommationPiece">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="ConsommationPieceattrs" value="- quantiteConsommee : Integer" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="ConsommationPiece">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="30" />
+        </mxCell>
+        <mxCell id="ConsommationPieceops" value="+ enregistrer() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="ConsommationPiece">
+          <mxGeometry as="geometry" x="0" y="68" width="320" height="177" />
+        </mxCell>
+        <mxCell id="ConsommationPieceline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="ConsommationPiece">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ConsommationPieceline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="ConsommationPiece">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="68" />
+            <mxPoint as="targetPoint" x="320" y="68" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Piece" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="500" y="1315" width="320" height="245" />
+        </mxCell>
+        <mxCell id="Piecename" value="Piece" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="Piece">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="Pieceattrs" value="- referencePiece : String&lt;br&gt;- libelle : String&lt;br&gt;- prixUnitaireHT : Decimal&lt;br&gt;- quantiteStock : Integer" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Piece">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="90" />
+        </mxCell>
+        <mxCell id="Pieceops" value="+ consulterStock() : Integer&lt;br&gt;+ mettreAJourStock(q : Integer) : void&lt;br&gt;+ gererNomenclature() : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="Piece">
+          <mxGeometry as="geometry" x="0" y="128" width="320" height="117" />
+        </mxCell>
+        <mxCell id="Pieceline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Piece">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pieceline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="Piece">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="128" />
+            <mxPoint as="targetPoint" x="320" y="128" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CompositionPiece" value="" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="1315" width="320" height="245" />
+        </mxCell>
+        <mxCell id="CompositionPiecename" value="CompositionPiece" style="text;html=1;fontStyle=1;fontSize=17;align=center;verticalAlign=middle;" vertex="1" parent="CompositionPiece">
+          <mxGeometry as="geometry" x="0" y="0" width="320" height="38" />
+        </mxCell>
+        <mxCell id="CompositionPieceattrs" value="- quantiteComposant : Integer" style="text;html=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="CompositionPiece">
+          <mxGeometry as="geometry" x="0" y="38" width="320" height="30" />
+        </mxCell>
+        <mxCell id="CompositionPieceops" value="+ ajouterComposant() : void&lt;br&gt;+ modifierQuantite(q : Integer) : void" style="text;html=1;fontSize=13;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" vertex="1" parent="CompositionPiece">
+          <mxGeometry as="geometry" x="0" y="68" width="320" height="177" />
+        </mxCell>
+        <mxCell id="CompositionPieceline0" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="CompositionPiece">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="38" />
+            <mxPoint as="targetPoint" x="320" y="38" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CompositionPieceline1" style="endArrow=none;html=1;strokeColor=#222222;" edge="1" parent="CompositionPiece">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="0" y="68" />
+            <mxPoint as="targetPoint" x="320" y="68" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="notes" name="Regles et hypotheses">
+    <mxGraphModel page="1" pageWidth="1400" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="notes" value="CONVENTIONS ET CONTRAINTES&lt;br&gt;&lt;br&gt;Attributs prives (-), operations publiques (+). Les relations portent les references objet : pas de cles etrangeres dupliquees.&lt;br&gt;&lt;br&gt;Operateur = ouvrier du sujet. LigneProduction = ligne de fabrication. Les methodes correspondent aux cas d’utilisation precedents.&lt;br&gt;&lt;br&gt;Chaque atelier et chaque equipe ont exactement un responsable. Chaque operateur appartient a exactement une equipe.&lt;br&gt;&lt;br&gt;Chaque lot a une ligne, un produit et au moins un operateur. Chaque incident concerne exactement un lot et un type.&lt;br&gt;&lt;br&gt;Une maintenance concerne une machine et comprend au moins une intervention ; chaque intervention est realisee par un operateur.&lt;br&gt;&lt;br&gt;Une seule intervention par couple (maintenance, operateur). Chaque consommation appartient a une intervention et designe une piece.&lt;br&gt;&lt;br&gt;AchatPiece conserve chaque occurrence datee d’achat : plusieurs prix/dates possibles pour le meme couple (piece, fournisseur).&lt;br&gt;&lt;br&gt;CompositionPiece relie deux roles de Piece : piece composee et piece composant. Quantite &amp;gt; 0 ; pas de cycle de nomenclature.&lt;br&gt;&lt;br&gt;Quantites et montants &amp;gt;= 0 ; durees &amp;gt;= 0 ; nbOperateursNecessaires &amp;gt; 0. Le besoin d’effectif ne fixe pas l’effectif historique d’un lot.&lt;br&gt;&lt;br&gt;HYPOTHESES AJOUTEES&lt;br&gt;&lt;br&gt;CompteUtilisateur sert a l’authentification. RoleUtilisateur = {ADMINISTRATEUR, RESPONSABLE_ATELIER, COLLABORATEUR_RESPONSABLE, OPERATEUR}.&lt;br&gt;&lt;br&gt;Un compte peut avoir un profil operateur et/ou responsable ; un compte administrateur peut n’avoir aucun profil metier.&lt;br&gt;&lt;br&gt;CollaborateurResponsable regroupe les responsables d’atelier et d’equipe, sans imposer qu’un responsable soit un operateur.&lt;br&gt;&lt;br&gt;Les identifiants techniques de Machine, Maintenance, Intervention, AchatPiece et CollaborateurResponsable sont ajoutes pour les distinguer.&lt;br&gt;&lt;br&gt;2..* lignes par atelier traduit « plusieurs ». 1..* machines par ligne et 1..* fournisseurs par piece decrivent un etat metier complet.&lt;br&gt;&lt;br&gt;Associations simples : l’enonce ne justifie pas une suppression en cascade des machines, lignes, lots ou historiques.&lt;br&gt;&lt;br&gt;Les suppressions des cas d’utilisation restent soumises aux contraintes des liens ; archivage possible pour conserver l’historique." style="text;html=1;align=left;verticalAlign=top;fontSize=18;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="40" width="1280" height="1000" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,100 @@
+<mxfile host="Electron">
+  <diagram name="Gestion des fournisseurs" id="d1">
+    <mxGraphModel dx="623" dy="417" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontStyle=1;fontSize=16;align=left;verticalAlign=middle;" value="Gestion des fournisseurs" vertex="1">
+          <mxGeometry height="30" width="360" x="140" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="720" width="380" x="140" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Administrateur" vertex="1">
+          <mxGeometry height="80" width="40" x="40" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="S&#39;authentifier" vertex="1">
+          <mxGeometry height="70" width="160" x="660" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="uc0" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Ajouter un fournisseur" vertex="1">
+          <mxGeometry height="70" width="260" x="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="as0" edge="1" parent="1" source="actor" style="endArrow=none;html=1;rounded=0;" target="uc0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inc0" edge="1" parent="1" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;labelBackgroundColor=default;" value="&amp;lt;include&amp;gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="409.9984268753327" y="133.99722495295813" as="sourcePoint" />
+            <mxPoint x="737.3829105039208" y="385.5555288017929" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uc1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Modifier un fournisseur" vertex="1">
+          <mxGeometry height="70" width="260" x="200" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="as1" edge="1" parent="1" source="actor" style="endArrow=none;html=1;rounded=0;" target="uc1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inc1" edge="1" parent="1" source="uc1" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;labelBackgroundColor=default;" target="auth" value="&amp;lt;include&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uc2" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Supprimer un fournisseur" vertex="1">
+          <mxGeometry height="70" width="260" x="200" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="as2" edge="1" parent="1" source="actor" style="endArrow=none;html=1;rounded=0;" target="uc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc2" edge="1" parent="1" source="uc2" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;labelBackgroundColor=default;" target="auth" value="&amp;lt;include&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uc3" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Consulter les fournisseurs" vertex="1">
+          <mxGeometry height="70" width="260" x="200" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="as3" edge="1" parent="1" source="actor" style="endArrow=none;html=1;rounded=0;" target="uc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc3" edge="1" parent="1" source="uc3" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;labelBackgroundColor=default;" target="auth" value="&amp;lt;include&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uc4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Associer un fournisseur à une pièce" vertex="1">
+          <mxGeometry height="70" width="260" x="200" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="as4" edge="1" parent="1" source="actor" style="endArrow=none;html=1;rounded=0;" target="uc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc4" edge="1" parent="1" source="uc4" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;labelBackgroundColor=default;" target="auth" value="&amp;lt;include&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uc5" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Gérer les prix d&#39;achat et prix" vertex="1">
+          <mxGeometry height="70" width="260" x="200" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="as5" edge="1" parent="1" source="actor" style="endArrow=none;html=1;rounded=0;" target="uc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc5" edge="1" parent="1" source="uc5" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;labelBackgroundColor=default;" target="auth" value="&amp;lt;include&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uc6" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Consulter l&#39;historique des achats" vertex="1">
+          <mxGeometry height="70" width="260" x="200" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="as6" edge="1" parent="1" source="actor" style="endArrow=none;html=1;rounded=0;" target="uc6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inc6" edge="1" parent="1" source="uc6" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;labelBackgroundColor=default;" target="auth" value="&amp;lt;include&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

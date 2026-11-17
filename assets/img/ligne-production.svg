@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" class="scene">
+  <g fill="none" stroke="#5E7A8F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 40h120v70H150z"/>
+    <path d="M170 110v28M250 110v28"/>
+    <path d="M196 110v18h28v-18"/>
+    <path d="M205 128v14h10v-14" class="tete"/>
+    <path d="M168 58h84M168 72h56"/>
+    <circle cx="246" cy="66" r="6"/>
+    <path d="M330 70h110v62H330zM350 132v8M420 132v8"/>
+    <path d="M348 90h74M348 104h50"/>
+    <path d="M20 232h480"/>
+    <path d="M20 252h480"/>
+    <path d="M20 232a10 10 0 0 0 0 20M500 232a10 10 0 0 1 0 20"/>
+  </g>
+  <g fill="none" stroke="#3E5568" stroke-width="1.5">
+    <circle cx="60" cy="242" r="7"/><circle cx="120" cy="242" r="7"/><circle cx="180" cy="242" r="7"/>
+    <circle cx="240" cy="242" r="7"/><circle cx="300" cy="242" r="7"/><circle cx="360" cy="242" r="7"/>
+    <circle cx="420" cy="242" r="7"/><circle cx="480" cy="242" r="7"/>
+  </g>
+  <g class="tapis">
+    <g class="flacon"><path d="M36 230v-34l6-8v-10h8v10l6 8v34z" fill="none" stroke="#9FB6C8" stroke-width="1.5" stroke-linejoin="round"/><path d="M38 228v-20h16v20z" fill="#F2B544"/></g>
+    <g class="flacon"><path d="M106 230v-34l6-8v-10h8v10l6 8v34z" fill="none" stroke="#9FB6C8" stroke-width="1.5" stroke-linejoin="round"/><path d="M108 228v-20h16v20z" fill="#F2B544"/></g>
+    <g class="flacon"><path d="M176 230v-34l6-8v-10h8v10l6 8v34z" fill="none" stroke="#9FB6C8" stroke-width="1.5" stroke-linejoin="round"/><path d="M178 228v-12h16v12z" fill="#F2B544"/></g>
+    <g class="flacon"><path d="M246 230v-34l6-8v-10h8v10l6 8v34z" fill="none" stroke="#9FB6C8" stroke-width="1.5" stroke-linejoin="round"/></g>
+    <g class="flacon"><path d="M316 230v-34l6-8v-10h8v10l6 8v34z" fill="none" stroke="#9FB6C8" stroke-width="1.5" stroke-linejoin="round"/></g>
+    <g class="flacon"><path d="M386 230v-34l6-8v-10h8v10l6 8v34z" fill="none" stroke="#9FB6C8" stroke-width="1.5" stroke-linejoin="round"/><path d="M388 228v-20h16v20z" fill="#F2B544"/><path d="M386 206h20" stroke="#1B6FB5" stroke-width="5"/></g>
+    <g class="flacon"><path d="M456 230v-34l6-8v-10h8v10l6 8v34z" fill="none" stroke="#9FB6C8" stroke-width="1.5" stroke-linejoin="round"/><path d="M458 228v-20h16v20z" fill="#F2B544"/><path d="M456 206h20" stroke="#1B6FB5" stroke-width="5"/></g>
+  </g>
+  <path d="M20 276h480" stroke="#2C3E4D" stroke-width="1" stroke-dasharray="2 6"/>
+</svg>
