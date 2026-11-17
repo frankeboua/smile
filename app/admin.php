@@ -32,6 +32,7 @@ function page_connexion(): void
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Connexion · Smile</title>
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1E2A33">
 <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body class="page-connexion">
@@ -64,6 +65,7 @@ function page_connexion(): void
           <input id="mot_de_passe" name="mot_de_passe" type="password" autocomplete="current-password" required>
           <button type="button" class="bouton-discret" data-voir-mdp="mot_de_passe" aria-label="Afficher le mot de passe">Afficher</button>
         </div>
+        <p class="alerte-maj" id="alerte-maj" data-alerte-maj="mot_de_passe" aria-live="polite"></p>
       </div>
       <button class="bouton bouton-plein" type="submit">Se connecter</button>
       <p class="pied-connexion"><?= e($CONFIG['app']['usine']) ?></p>

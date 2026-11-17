@@ -76,9 +76,11 @@ function page_debut(string $titre, string $courant, string $intro = '', string $
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($titre) ?> · Smile</title>
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1E2A33">
 <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
+<a class="lien-evitement" href="#contenu">Aller au contenu principal</a>
 <div class="app">
   <aside class="nav" id="nav">
     <a class="marque" href="<?= e(url('tableau')) ?>">
@@ -102,7 +104,7 @@ function page_debut(string $titre, string $courant, string $intro = '', string $
 
   <div class="principal">
     <header class="barre">
-      <button class="bouton-menu" type="button" data-bascule="nav" aria-label="Ouvrir le menu"><span></span></button>
+      <button class="bouton-menu" type="button" data-bascule="nav" aria-controls="nav" aria-expanded="false" aria-label="Ouvrir le menu"><span></span></button>
       <div class="barre-espace"></div>
       <a class="moi" href="<?= e(url('profil')) ?>">
         <span class="avatar" aria-hidden="true"><?= e(mb_strtoupper(mb_substr($u['nom_affiche'], 0, 1))) ?></span>
@@ -114,7 +116,7 @@ function page_debut(string $titre, string $courant, string $intro = '', string $
       </form>
     </header>
 
-    <main class="contenu" id="contenu">
+    <main class="contenu" id="contenu" tabindex="-1">
       <div class="entete">
         <div>
           <h1><?= e($titre) ?></h1>

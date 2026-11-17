@@ -27,6 +27,14 @@
   --vert-pale: #E3F2E8;
   --r-champ: 6px;
   --r-panneau: 10px;
+  /* Mouvement : une seule grammaire pour toute l'application */
+  --duree-rapide: 140ms;
+  --duree: 220ms;
+  --duree-entree: 420ms;
+  --ease-entree: cubic-bezier(.2, .8, .2, 1);
+  --ease-sortie: cubic-bezier(.4, 0, 1, 1);
+  --ease-io: cubic-bezier(.6, 0, .2, 1);
+  color-scheme: light;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -56,7 +64,7 @@ p { margin: 0; }
 .code { font-size: 12.5px; font-weight: 500; color: var(--texte-2); background: var(--fond); border: 1px solid var(--trait); border-radius: 4px; padding: 1px 6px; white-space: nowrap; }
 
 /* ---------- Ossature ---------- */
-.app { display: grid; grid-template-columns: 252px 1fr; min-height: 100vh; background: linear-gradient(to right, var(--fonte) 252px, transparent 252px); }
+.app { display: grid; grid-template-columns: 252px 1fr; min-height: 100vh; min-height: 100dvh; background: linear-gradient(to right, var(--fonte) 252px, transparent 252px); }
 .nav {
   background: var(--fonte);
   color: #C9D4DC;
@@ -248,7 +256,8 @@ input[type="checkbox"], input[type="radio"] { width: auto; accent-color: var(--b
 .barres li { display: grid; grid-template-columns: 74px 1fr 82px; gap: 12px; align-items: center; padding: 6px 0; font-size: 13.5px; }
 .barre-lib { color: var(--texte-2); }
 .barre-piste { height: 10px; background: #EDF1F3; border-radius: 3px; overflow: hidden; }
-.barre-valeur { display: block; height: 100%; width: 0; background: var(--fonte-2); border-radius: 3px; transition: width .6s ease-out; }
+.barre-valeur { display: block; height: 100%; width: 100%; background: var(--fonte-2); border-radius: 3px; transform: scaleX(0); transform-origin: left center; }
+.barre-valeur.pret { transform: scaleX(var(--part, 0)); }
 .barre-valeur.max { background: var(--ambre); }
 .barre-nb { text-align: right; font-variant-numeric: tabular-nums; }
 
@@ -292,15 +301,17 @@ input[type="checkbox"], input[type="radio"] { width: auto; accent-color: var(--b
 
 /* ---------- Adaptation écrans ---------- */
 @media (max-width: 1080px) {
-  .colonnes { grid-template-columns: 1fr; }
+  .colonnes, .colonnes:has(> .panneau-large:first-child) { grid-template-columns: 1fr; }
   .chiffres { grid-template-columns: repeat(2, 1fr); }
   .chiffres > div:nth-child(3) { border-left: 0; }
   .chiffres > div:nth-child(n+3) { border-top: 1px solid var(--trait); }
 }
 @media (max-width: 860px) {
   .app { grid-template-columns: 1fr; background: none; }
-  .nav { position: fixed; inset: 0 auto 0 0; width: 270px; z-index: 20; transform: translateX(-100%); transition: transform .2s; }
-  .nav.ouvert { transform: none; box-shadow: 0 0 0 100vmax rgba(15, 22, 28, .45); }
+  .nav { position: fixed; inset: 0 auto 0 0; width: min(290px, 86vw); height: 100dvh; z-index: 20; transform: translateX(-100%); visibility: hidden; box-shadow: 0 0 0 100vmax rgba(15, 22, 28, 0); transition: transform var(--duree) var(--ease-sortie), box-shadow var(--duree) var(--ease-sortie), visibility 0s linear var(--duree); }
+  .nav.ouvert { transform: none; visibility: visible; box-shadow: 0 0 0 100vmax rgba(15, 22, 28, .45); transition: transform 320ms var(--ease-entree), box-shadow 320ms var(--ease-entree), visibility 0s; }
+  .nav li a { min-height: 44px; }
+  input, select { font-size: 16px; }
   .bouton-menu { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--trait); background: var(--surface); border-radius: var(--r-champ); cursor: pointer; }
   .bouton-menu span, .bouton-menu span::before, .bouton-menu span::after { display: block; width: 16px; height: 2px; background: var(--texte); position: relative; content: ""; }
   .bouton-menu span::before { position: absolute; top: -5px; }
@@ -326,3 +337,94 @@ input[type="checkbox"], input[type="radio"] { width: auto; accent-color: var(--b
   body { background: #fff; }
 }
 [hidden] { display: none !important; }
+
+/* ==================================================================
+ * Améliorations UX, accessibilité et animation (v2)
+ * ================================================================== */
+
+/* Lien d'évitement : visible seulement au clavier */
+.lien-evitement {
+  position: fixed; top: 10px; left: 10px; z-index: 100;
+  background: var(--surface); color: var(--bleu-fonce); font-weight: 600;
+  padding: 10px 16px; border-radius: var(--r-champ);
+  transform: translateY(-200%);
+}
+.lien-evitement:focus { transform: none; text-decoration: none; box-shadow: 0 6px 24px rgba(15, 22, 28, .18); }
+.contenu:focus { outline: none; }
+
+/* Focus clavier plus lisible (2 px + halo, contraste 3:1 sur fond clair et sombre) */
+:focus-visible { outline: 2px solid var(--bleu); outline-offset: 2px; border-radius: 4px; }
+.nav :focus-visible { outline-color: #F2B544; }
+input:focus-visible, select:focus-visible { outline: none; }
+
+/* Retour visuel immédiat : survol, appui, transitions courtes */
+.bouton, .bouton-second, .bouton-discret, .bouton-lien, .raccourci, .nav li a,
+.pagination a, .onglets a, .case, .tableau tbody td, input, select, .moi .avatar {
+  transition: background-color var(--duree-rapide) ease, border-color var(--duree-rapide) ease,
+              color var(--duree-rapide) ease, box-shadow var(--duree-rapide) ease, transform var(--duree-rapide) var(--ease-entree);
+}
+.bouton:active, .bouton-second:active, .raccourci:active { transform: scale(.98); }
+.bouton, .bouton-second, .bouton-discret, .bouton-lien, .bouton-menu { touch-action: manipulation; }
+.raccourci { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.raccourci::after { content: "›"; color: var(--texte-3); font-size: 18px; line-height: 1; transition: transform var(--duree) var(--ease-entree), color var(--duree-rapide) ease; }
+.raccourci:hover::after { transform: translateX(3px); color: var(--bleu); }
+.moi:hover .avatar { box-shadow: 0 0 0 3px var(--bleu-pale); }
+
+/* Envoi d'un formulaire : bouton occupé, pas de double envoi */
+.envoi-en-cours [type="submit"] { cursor: progress; opacity: .75; }
+.envoi-en-cours .bouton[type="submit"]::after {
+  content: ""; width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, .45); border-top-color: #fff;
+  animation: tourne .7s linear infinite;
+}
+@keyframes tourne { to { transform: rotate(360deg); } }
+
+/* Alerte majuscules (connexion) */
+.alerte-maj { font-size: 13px; color: var(--ambre-texte); margin-top: 6px; min-height: 0; }
+.alerte-maj:empty { display: none; }
+
+/* Cibles tactiles confortables sur écran tactile (≥ 44 px) */
+@media (pointer: coarse) {
+  .bouton, .bouton-second, .bouton-discret { min-height: 44px; }
+  .bouton-lien { min-height: 44px; padding: 8px 10px; }
+  .pagination a { min-width: 44px; height: 44px; }
+  .onglets a { padding: 12px 14px; }
+  .case { padding: 10px 9px; }
+  input, select { min-height: 44px; }
+}
+
+/* Animations d'entrée : discrètes, échelonnées, désactivées si l'utilisateur
+   demande moins de mouvement. Uniquement opacity + transform (pas de reflow). */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes monte { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes apparait { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes glisse { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+  .contenu > .entete { animation: monte var(--duree-entree) var(--ease-entree) both; }
+  .contenu > .message { animation: glisse var(--duree) var(--ease-entree) both; }
+  .contenu > :where(:not(.entete, .message)) { animation: monte var(--duree-entree) var(--ease-entree) 60ms both; }
+  .contenu > .chiffres { animation-name: apparait; }
+  .chiffres > div { animation: monte var(--duree-entree) var(--ease-entree) both; }
+  .chiffres > div:nth-child(1) { animation-delay: 60ms; }
+  .chiffres > div:nth-child(2) { animation-delay: 100ms; }
+  .chiffres > div:nth-child(3) { animation-delay: 140ms; }
+  .chiffres > div:nth-child(4) { animation-delay: 180ms; }
+  .contenu > .colonnes { animation: none; }
+  .colonnes > * { animation: monte var(--duree-entree) var(--ease-entree) 160ms both; }
+  .colonnes > * + * { animation-delay: 220ms; }
+
+  .barre-valeur.pret { transition: transform 700ms var(--ease-io); }
+  .barres li:nth-child(2) .barre-valeur { transition-delay: 40ms; }
+  .barres li:nth-child(3) .barre-valeur { transition-delay: 80ms; }
+  .barres li:nth-child(4) .barre-valeur { transition-delay: 120ms; }
+  .barres li:nth-child(5) .barre-valeur { transition-delay: 160ms; }
+  .barres li:nth-child(6) .barre-valeur { transition-delay: 200ms; }
+  .barres li:nth-child(n+7) .barre-valeur { transition-delay: 240ms; }
+
+  .connexion-form form { animation: monte 520ms var(--ease-entree) 80ms both; }
+  .connexion-texte { animation: monte 520ms var(--ease-entree) 200ms both; }
+  .install { animation: monte var(--duree-entree) var(--ease-entree) both; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
